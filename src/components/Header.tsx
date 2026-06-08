@@ -18,7 +18,7 @@ function Arrow({ dir }: { dir: "left" | "right" }) {
 
 const navLinks = [
   { to: "/contact-me", label: "Contact Me" },
-  { to: "/", label: "My Works" },
+  { to: "/#work", label: "My Works" },
 ];
 
 function DesktopNav() {
@@ -94,7 +94,7 @@ function DesktopNav() {
         onMouseEnter={handleOpen}
         className="relative z-20 text-lg font-bold px-3 py-2"
       >
-        Logo
+        <img src="/logo/Logo.jpg" className="h-11 w-11 rounded-full" alt="My logo" />
       </Link>
 
       {!open && <Arrow dir="right" />}
@@ -118,7 +118,7 @@ function MobileNav() {
           transition={{ delay: item.delay, duration: 0.4 }}
         >
           <Link to={item.to} className="text-lg font-bold">
-            {item.label}
+            <img src="/public/logo/Logo.jpg" className="h-15 rounded-full w-15" alt="" />
           </Link>
         </motion.div>
       ))}

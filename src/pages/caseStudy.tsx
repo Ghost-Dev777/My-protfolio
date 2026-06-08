@@ -68,7 +68,7 @@ export default function CaseStudyPage() {
             <h2 className="mb-6 text-xl font-bold tracking-tight">More work</h2>
             <div className="grid gap-6 sm:grid-cols-2">
               {others.map((other) => (
-                <Link key={other.slug} to={`/works/${other.slug}`} className="group flex flex-col gap-3">
+                <Link key={other.slug} to={`/work/${other.slug}`} className="group flex flex-col gap-3">
                   <div className="overflow-hidden rounded-xl border border-border">
                     <img
                       src={other.image || '/placeholder.svg'}
