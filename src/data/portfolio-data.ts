@@ -15,40 +15,44 @@ export const projects: Project[] = [
     slug: "Task-Manager",
     title: "Task Manager(Under Development)",
     description:
-      "A real-time analytics dashboard for tracking spending, budgets, and investments with live data visualizations.",
+      "Full‑stack task management application built with the MERN stack (MongoDB, Express, React). Features include authentication, task categorization, filtering, analytics dashboards, and notification reminders.",
     longDescription:
-      "A full-stack finance platform that aggregates accounts and renders interactive charts in real time. Built with a React front end, an Express API layer, and MongoDB for storage. Features secure auth, optimistic UI updates, and a fully responsive layout.",
-    image: "/projects/finance-dashboard.png",
+      "This project is a full‑stack task management application built using the MERN stack (MongoDB, Express.js, React.js). The application allows users to create, organize, and manage their daily tasks with categorized task lists and flexible filtering options.It includes a complete authentication flow with user registration, login, and input validation. Users can create, update, delete, and categorize tasks while tracking their productivity through visual statistics and progress indicators.The dashboard provides analytical insights such as completion rates and task distribution over time using interactive charts. The system also supports reminder notifications for scheduled tasks.The frontend interface was built with React and styled using Tailwind CSS, focusing on a clean, responsive user experience and efficient state management.",
+    image: "/public/projects/task-1.png",
     github: "https://github.com/Ghost-Dev777/todo-list-app-af",
     tags: ["React.js", "Express.js", "MongoDB", "TailwindCSS"],
     year: "2025",
-    screenshots: ["/projects/finance-dashboard.png"],
+    screenshots: ["/public/projects/task-1.png"],
   },
   {
     slug: "Cloud-product",
-    title: "Commerce Storefront",
+    title: "Aban Cloud Website",
     description:
-      "A headless e-commerce storefront with a custom cart, product search, and a smooth checkout flow.",
+      "A cloud services website built with Laravel, Tailwind CSS, and jQuery, focused on responsive UI, core SEO implementation, interactive navigation, and optimized media assets.",
     longDescription:
-      "A performant storefront built on a headless commerce backend. Implements a custom cart with persistent state, faceted product search, and an accessible checkout. The UI is component-driven with SCSS modules and server-rendered for fast first paint.",
+      "This project is a cloud services presentation and sales website developed using Laravel, Tailwind CSS, jQuery, and Sass. I was responsible for most of the implementation across the frontend layer, including page development, routing structure, responsive layout behavior, and core UI styling.Beyond the interface implementation, I also worked on foundational SEO-related frontend practices such as proper HTML attributes, cleaner page structure, and performance-aware asset delivery. To improve loading behavior and user experience, I implemented lazy loading strategies and optimized visual assets including images, icons, and logos using Photoshop and Illustrator.",
     image: "/public/projects/abancloud-1.png",
     github: "https://www.abancloud.ir",
     tags: ["Laraverl", "PHP", "Tailwind Css", "Photoshop"],
     year: "2023",
-    screenshots: ["/public/projects/abancloud-2.png","/public/projects/abancloud-3.png","/public/projects/abancloud-4.png"],
+    screenshots: [
+      "/public/projects/abancloud-2.png",
+      "/public/projects/abancloud-3.png",
+      "/public/projects/abancloud-4.png",
+    ],
   },
   {
     slug: "Ecommerce",
     title: "E-Commerce (Under Development)",
     description:
-      "A websocket-powered chat app with rooms, typing indicators, and message history.",
+      "A high-performance e-commerce platform built with React, focusing on seamless user experience. Features a dynamic cart, advanced product filtering, secure checkout flow, and optimized performance for fast navigation.",
     longDescription:
-      "A real-time messaging application supporting multiple rooms, presence, typing indicators, and persisted history. Powered by a Node.js socket server and a React client with optimistic message delivery and reconnection handling.",
-    image: "/projects/chat-app.png",
+      "This e-commerce platform is a robust web application built using React, designed to provide a smooth and responsive shopping experience. The system handles complex state management for the cart, allowing users to efficiently add, modify, and track their items.Users can browse through extensive product catalogs with powerful filtering and search capabilities based on price, category, and specifications. The project includes a seamless checkout flow, user authentication, and order history tracking, ensuring a complete and secure shopping journey.Special attention was given to performance optimization, implementing lazy loading, code splitting, and responsive design patterns to ensure high responsiveness across all devices. The interface is meticulously crafted for usability, bridging the gap between aesthetic appeal and functional performance.",
+    image: "/public/projects/shop-1.png",
     github: "https://github.com/Ghost-Dev777/E-commerce",
-    tags: ["React.js", "Node.js", "Express.js", "MongoDB","Sass"],
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Sass"],
     year: "2026",
-    screenshots: ["/projects/chat-app.png"],
+    screenshots: ["/public/projects/shop-2.png","/public/projects/shop-3.png"],
   },
 ];
 
