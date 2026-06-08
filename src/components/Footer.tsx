@@ -1,7 +1,6 @@
-import Link from 'next/link'
+// import { Link } from 'react-router-dom';
 import { Mail } from 'lucide-react'
-import { GithubIcon, LinkedinIcon } from '@/components/brand-icons'
-import { gmailLink, social } from '@/lib/portfolio-data'
+import { GithubIcon, LinkedinIcon,gmailLink } from './brand-icons'
 
 export function Footer() {
   return (
@@ -24,24 +23,24 @@ export function Footer() {
           <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
             Pages
           </span>
-          <Link
+          <a
             href="/"
             className="text-sm text-foreground transition-colors hover:text-primary"
           >
             Home
-          </Link>
-          <Link
+          </a>
+          <a
             href="/contact"
             className="text-sm text-foreground transition-colors hover:text-primary"
           >
             Contact
-          </Link>
-          <Link
+          </a>
+          <a
             href="/#works"
             className="text-sm text-foreground transition-colors hover:text-primary"
           >
             Works
-          </Link>
+          </a>
         </nav>
 
         <div className="flex flex-col gap-3">
@@ -49,7 +48,7 @@ export function Footer() {
             Connect
           </span>
           <a
-            href={social.linkedin}
+            href='https://linkedin.com/in/ashkan-firouzeh'
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-2 text-sm text-foreground transition-colors hover:text-primary"
@@ -57,7 +56,7 @@ export function Footer() {
             <LinkedinIcon className="size-4" /> LinkedIn
           </a>
           <a
-            href={social.github}
+            href='https://github.com/Ghost-Dev777'
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-2 text-sm text-foreground transition-colors hover:text-primary"

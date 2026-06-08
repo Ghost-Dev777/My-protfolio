@@ -1,62 +1,73 @@
-import { motion } from 'motion/react'
-import { skills } from '@/lib/portfolio-data'
+import { useRef } from "react";
+import { motion, useScroll, useTransform, MotionValue } from "motion/react";
 
-const lines = [
-  'I build end-to-end web applications,',
-  'from polished, accessible interfaces',
-  'to robust APIs and data layers.',
-  'I care about performance, detail,',
-  'and shipping experiences people enjoy.',
-]
+const text =
+  "I’m a Front-End Developer focused on building modern, scalable, and product-oriented web interfaces with React.js and its ecosystem. Across different projects, I’ve worked on interfaces where visual quality, usability, maintainability, and product logic all matter.Alongside this specialization, my professional path is actively expanding toward Full-Stack Development — a direction that has already moved into practical execution through projects built with MongoDB and Express.js,I’m interested in growing at the intersection of software engineering, AI/ML, and large language models, and contributing to products that are both technically strong and genuinely useful.";
+
+function Char({
+  char,
+  progress,
+  index,
+  total,
+}: {
+  char: string;
+  progress: MotionValue<number>;
+  index: number;
+  total: number;
+}) {
+  const start = index / total;
+  const end = Math.min(start + 1.5 / total, 1);
+
+  const opacity = useTransform(progress, [start, end], [0.01, 1]);
+
+  return (
+    <motion.span
+      style={{ opacity }}
+      className="inline-block whitespace-pre-wrap"
+    >
+      {char}
+    </motion.span>
+  );
+}
 
 export function About() {
+  const ref = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const progress = useTransform(scrollYProgress, [0, 0.6], [0, 1]);
+  const chars = text.split("");
+
   return (
     <section
       id="about"
-      className="relative flex min-h-screen flex-col justify-center px-6 py-24 md:px-16 lg:px-24"
+      ref={ref}
+      className="relative flex min-h-screen flex-col justify-center px-6 py-24 md:px-10 lg:px-24"
     >
-      <div className="mx-auto w-full max-w-5xl">
+      <div className="mx-auto w-full">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-10 font-mono text-sm uppercase tracking-widest text-primary"
+          className="pb-5 font-mono text-sm uppercase tracking-widest text-primary"
         >
           About Me
         </motion.p>
 
-        <div className="space-y-2">
-          {lines.map((line, i) => (
-            <motion.p
+        <p className="text-xl font-medium leading-relaxed tracking-tight sm:text-2xl lg:text-4xl">
+          {chars.map((char, i) => (
+            <Char
               key={i}
-              initial={{ opacity: 0.12, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ margin: '-30% 0px -30% 0px' }}
-              transition={{ duration: 0.5 }}
-              className="text-pretty text-2xl font-medium leading-snug tracking-tight sm:text-4xl lg:text-5xl"
-            >
-              {line}
-            </motion.p>
+              char={char}
+              progress={progress}
+              index={i}
+              total={chars.length}
+            />
           ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mt-12 flex flex-wrap gap-3"
-        >
-          {skills.map((skill) => (
-            <span
-              key={skill}
-              className="rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground transition-colors hover:border-primary hover:text-primary"
-            >
-              {skill}
-            </span>
-          ))}
-        </motion.div>
+        </p>
       </div>
     </section>
-  )
+  );
 }

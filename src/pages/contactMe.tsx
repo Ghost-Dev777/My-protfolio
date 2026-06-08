@@ -1,25 +1,15 @@
-import Link from 'next/link'
-import type { Metadata } from 'next'
+import {Link} from 'react-router-dom'
 import { ArrowLeft, Mail } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from '@/components/brand-icons'
-import { SiteNav } from '@/components/site-nav'
-import { Footer } from '@/components/footer'
 import { ContactForm } from '@/components/contact-form'
-import { gmailLink, social } from '@/lib/portfolio-data'
-
-export const metadata: Metadata = {
-  title: 'Contact — Ashkan Firouzeh',
-  description: 'Get in touch with Ashkan Firouzeh for projects and collaborations.',
-}
 
 export default function ContactPage() {
   return (
     <main className="relative">
-      <SiteNav />
       <section className="min-h-screen px-6 pb-24 pt-32 md:px-16 lg:px-24">
         <div className="mx-auto w-full max-w-5xl">
           <Link
-            href="/"
+            to="/"
             className="mb-10 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
           >
             <ArrowLeft className="size-4" /> Back home
@@ -39,30 +29,30 @@ export default function ContactPage() {
               </p>
 
               <div className="mt-4 flex flex-col gap-3">
-                <a
-                  href={gmailLink}
+                <Link
+                  to='https://mail.google.com/mail/?view=cm&fs=1&to=ahknfirouzeh8024m@gmail.com'
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2 text-sm text-foreground transition-colors hover:text-primary"
                 >
-                  <Mail className="size-4" /> {social.email}
-                </a>
-                <a
-                  href={social.linkedin}
+                  <Mail className="size-4" /> ahknfirouzeh8024m@gmail.com
+                </Link>
+                <Link
+                  to='https://linkedin.com/in/ashkan-firouzeh'
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2 text-sm text-foreground transition-colors hover:text-primary"
                 >
                   <LinkedinIcon className="size-4" /> LinkedIn
-                </a>
-                <a
-                  href={social.github}
+                </Link>
+                <Link
+                  to='https://github.com/Ghost-Dev777'
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2 text-sm text-foreground transition-colors hover:text-primary"
                 >
                   <GithubIcon className="size-4" /> GitHub
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -70,7 +60,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-      <Footer />
     </main>
   )
 }
