@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import { useScrollToSection } from "../useScrolltoSection.ts";
 
 const sections = [
   { id: "hero", label: "Home" },
   { id: "about", label: "About" },
   { id: "works", label: "Works" },
-  { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
+  { id: "experience", label: "Experience" },
   { id: "footer", label: "End" },
 ];
 
@@ -14,6 +15,7 @@ export function ProgressIndicator() {
   const [progress, setProgress] = useState(0);
   const [active, setActive] = useState("hero");
   const [hovered, setHovered] = useState<string | null>(null);
+  const scrollTo = useScrollToSection();
 
   useEffect(() => {
     const onScroll = () => {
@@ -46,12 +48,12 @@ export function ProgressIndicator() {
       <ul className="pointer-events-auto flex flex-col items-center gap-3">
         {sections.map((section) => (
           <li key={section.id}>
-            <motion.a
-              href={`#${section.id}`}
+            <motion.span
               aria-label={`Go to ${section.label} section`}
-              className="group relative flex items-center gap-2"
+              className="group relative flex items-center gap-2 cursor-pointer"
               onHoverStart={() => setHovered(section.id)}
               onHoverEnd={() => setHovered(null)}
+              onClick={()=>scrollTo(section.id)}
             >
               <motion.span
                 animate={{
@@ -71,7 +73,7 @@ export function ProgressIndicator() {
                     : "bg-muted-foreground/40"
                 }`}
               />
-            </motion.a>
+            </motion.span>
           </li>
         ))}
       </ul>

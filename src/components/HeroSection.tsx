@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { ArrowDown, Mail } from "lucide-react";
 import { GithubIcon, gmailLink, LinkedinIcon } from "./brand-icons";
+import { useScrollToSection } from "@/useScrolltoSection";
 
 const name = "I'm Ashkan Firouzeh";
 const subtitle =
@@ -26,6 +27,8 @@ function TypingText({ text }: { text: string }) {
 }
 
 export function HeroSection() {
+  const scrollTo=useScrollToSection();
+
   return (
     <section
       id="hero"
@@ -97,9 +100,9 @@ export function HeroSection() {
         </Link>
       </div>
 
-      <Link
-        to="#about"
+      <span
         aria-label="Scroll to about section"
+        onClick={()=>scrollTo('about')}
         className="absolute hidden md:inline-block bottom-24 left-1/2 -translate-x-1/2 text-muted-foreground transition-colors hover:text-primary md:bottom-8"
       >
         <motion.span
@@ -109,7 +112,7 @@ export function HeroSection() {
         >
           <ArrowDown className="size-6" />
         </motion.span>
-      </Link>
+      </span>
     </section>
   );
 }

@@ -4,16 +4,21 @@ export function useScrollToSection() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  return (sectionId?: string) => {
-    if (!sectionId) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      return;
-    }
-    if (location.pathname !== "/") {
-      sessionStorage.setItem("scrollTo", sectionId);
-      navigate("/");
+  return (sectionId: string) => {
+    const scroll = () => {
+      if (sectionId === "hero") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+      const el = document.getElementById(sectionId);
+      el?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    if (location.pathname === "/") {
+      scroll();
     } else {
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+      sessionStorage.setItem("scrollTarget", sectionId);
+      navigate("/");
     }
   };
 }

@@ -18,7 +18,7 @@ function Arrow({ dir }: { dir: "left" | "right" }) {
 
 const navLinks = [
   { to: "/contact-me", label: "Contact Me" },
-  { to: "/#work", label: "My Works" },
+  { to: "/", label: "My Works" },
 ];
 
 function DesktopNav() {
@@ -59,7 +59,6 @@ function DesktopNav() {
             >
               <Link
                 to={navLinks[0].to}
-                onClick={() => scrollTo("works")}
                 className="text-sm font-medium hover:text-primary whitespace-nowrap px-6"
               >
                 {navLinks[0].label}
@@ -79,7 +78,7 @@ function DesktopNav() {
             >
               <Link
                 to={navLinks[1].to}
-                onClick={() => scrollTo("home")}
+                onClick={() => scrollTo("works")}
                 className="text-sm font-medium hover:text-primary whitespace-nowrap px-6"
               >
                 {navLinks[1].label}
@@ -92,6 +91,7 @@ function DesktopNav() {
       <Link
         to="/"
         onMouseEnter={handleOpen}
+        onClick={() => scrollTo("hero")}
         className="relative z-20 text-lg font-bold px-3 py-2"
       >
         <img src="/logo/Logo.jpg" className="h-11 w-11 rounded-full" alt="My logo" />

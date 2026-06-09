@@ -18,11 +18,11 @@ export const projects: Project[] = [
       "Full‑stack task management application built with the MERN stack (MongoDB, Express, React). Features include authentication, task categorization, filtering, analytics dashboards, and notification reminders.",
     longDescription:
       "This project is a full‑stack task management application built using the MERN stack (MongoDB, Express.js, React.js). The application allows users to create, organize, and manage their daily tasks with categorized task lists and flexible filtering options.It includes a complete authentication flow with user registration, login, and input validation. Users can create, update, delete, and categorize tasks while tracking their productivity through visual statistics and progress indicators.The dashboard provides analytical insights such as completion rates and task distribution over time using interactive charts. The system also supports reminder notifications for scheduled tasks.The frontend interface was built with React and styled using Tailwind CSS, focusing on a clean, responsive user experience and efficient state management.",
-    image: "/public/projects/task-1.png",
+    image: "/projects/task-1.png",
     github: "https://github.com/Ghost-Dev777/todo-list-app-af",
     tags: ["React.js", "Express.js", "MongoDB", "TailwindCSS"],
     year: "2025",
-    screenshots: ["/public/projects/task-1.png"],
+    screenshots: ["/projects/task-1.png"],
   },
   {
     slug: "Cloud-product",
@@ -31,14 +31,14 @@ export const projects: Project[] = [
       "A cloud services website built with Laravel, Tailwind CSS, and jQuery, focused on responsive UI, core SEO implementation, interactive navigation, and optimized media assets.",
     longDescription:
       "This project is a cloud services presentation and sales website developed using Laravel, Tailwind CSS, jQuery, and Sass. I was responsible for most of the implementation across the frontend layer, including page development, routing structure, responsive layout behavior, and core UI styling.Beyond the interface implementation, I also worked on foundational SEO-related frontend practices such as proper HTML attributes, cleaner page structure, and performance-aware asset delivery. To improve loading behavior and user experience, I implemented lazy loading strategies and optimized visual assets including images, icons, and logos using Photoshop and Illustrator.",
-    image: "/public/projects/abancloud-1.png",
+    image: "/projects/abancloud-1.png",
     github: "https://www.abancloud.ir",
     tags: ["Laraverl", "PHP", "Tailwind Css", "Photoshop"],
     year: "2023",
     screenshots: [
-      "/public/projects/abancloud-2.png",
-      "/public/projects/abancloud-3.png",
-      "/public/projects/abancloud-4.png",
+      "/projects/abancloud-2.png",
+      "/projects/abancloud-3.png",
+      "/projects/abancloud-4.png",
     ],
   },
   {
@@ -48,11 +48,11 @@ export const projects: Project[] = [
       "A high-performance e-commerce platform built with React, focusing on seamless user experience. Features a dynamic cart, advanced product filtering, secure checkout flow, and optimized performance for fast navigation.",
     longDescription:
       "This e-commerce platform is a robust web application built using React, designed to provide a smooth and responsive shopping experience. The system handles complex state management for the cart, allowing users to efficiently add, modify, and track their items.Users can browse through extensive product catalogs with powerful filtering and search capabilities based on price, category, and specifications. The project includes a seamless checkout flow, user authentication, and order history tracking, ensuring a complete and secure shopping journey.Special attention was given to performance optimization, implementing lazy loading, code splitting, and responsive design patterns to ensure high responsiveness across all devices. The interface is meticulously crafted for usability, bridging the gap between aesthetic appeal and functional performance.",
-    image: "/public/projects/shop-1.png",
+    image: "/projects/shop-1.png",
     github: "https://github.com/Ghost-Dev777/E-commerce",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Sass"],
     year: "2026",
-    screenshots: ["/public/projects/shop-2.png","/public/projects/shop-3.png"],
+    screenshots: ["/projects/shop-2.png","/projects/shop-3.png"],
   },
 ];
 
@@ -101,58 +101,58 @@ export type skills = {
 export const skills: skills[] = [
   {
     title: "React.js",
-    imgURL: "../../public/logo/react.png",
+    imgURL: "/logo/react.png",
   },
   {
     title: "Angular",
-    imgURL: "../../public/logo/angular.png",
+    imgURL: "/logo/angular.png",
   },
   {
     title: "React Router",
-    imgURL: "../../public/logo/react-router-logo-png-transparent.png",
+    imgURL: "/logo/react-router-logo-png-transparent.png",
   },
   {
     title: "Redux",
-    imgURL: "../../public/logo/redux.png",
+    imgURL: "/logo/redux.png",
   },
   {
     title: "Motion",
-    imgURL: "../../public/logo/motion.png",
+    imgURL: "/logo/motion.png",
   },
   {
     title: "React Hook Form",
-    imgURL: "../../public/logo/react-hook-form.png",
+    imgURL: "/logo/react-hook-form.png",
   },
   {
     title: "Axios",
-    imgURL: "../../public/logo/axios.png",
+    imgURL: "/logo/axios.png",
   },
   {
     title: "Javascript",
-    imgURL: "../../public/logo/JS.png",
+    imgURL: "/logo/JS.png",
   },
   {
     title: "Typescript",
-    imgURL: "../../public/logo/typescript.png",
+    imgURL: "/logo/typescript.png",
   },
   {
     title: "Express.js",
-    imgURL: "../../public/logo/express.js.png",
+    imgURL: "/logo/express.js.png",
   },
   {
     title: "MongoDB",
-    imgURL: "../../public/logo/mongodb.png",
+    imgURL: "/logo/mongodb.png",
   },
   {
     title: "Tailwind Css",
-    imgURL: "../../public/logo/tailwind.png",
+    imgURL: "/logo/tailwind.png",
   },
   {
     title: "Sass",
-    imgURL: "../../public/logo/sass.png",
+    imgURL: "/logo/sass.png",
   },
   {
     title: "Jquery",
-    imgURL: "../../public/logo/jquery'.png",
+    imgURL: "/logo/jquery'.png",
   },
 ];
