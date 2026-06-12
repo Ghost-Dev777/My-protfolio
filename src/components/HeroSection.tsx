@@ -27,7 +27,7 @@ function TypingText({ text }: { text: string }) {
 }
 
 export function HeroSection() {
-  const scrollTo=useScrollToSection();
+  const scrollTo = useScrollToSection();
 
   return (
     <section
@@ -35,7 +35,7 @@ export function HeroSection() {
       className="animated-gradient relative flex min-h-screen flex-col justify-center overflow-hidden px-6 md:px-16 lg:px-24"
     >
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-3 lg:gap-6">
-        <h1 className="flex flex-wrap text-4xl font-bold m-0 tracking-tight sm:text-6xl lg:text-7xl">
+        <h1 className="flex flex-wrap text-4xl text-white font-bold m-0 tracking-tight sm:text-6xl lg:text-7xl">
           {name.split("").map((char, i) => (
             <motion.span
               key={i}
@@ -61,6 +61,17 @@ export function HeroSection() {
           className=" text-justify h-[120px]"
         >
           <TypingText text={subtitle} />
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: name.length * 0.04 + 0.8 }}
+        >
+          <a href="/cv/Ashkan-Firouzeh-CV.pdf" download className="cv-btn">
+            <span className="cv-btn__fill" />
+            <span className="cv-btn__text">Download My CV</span>
+          </a>
         </motion.div>
       </div>
 
@@ -102,7 +113,7 @@ export function HeroSection() {
 
       <span
         aria-label="Scroll to about section"
-        onClick={()=>scrollTo('about')}
+        onClick={() => scrollTo("about")}
         className="absolute hidden md:inline-block bottom-24 left-1/2 -translate-x-1/2 text-muted-foreground transition-colors hover:text-primary md:bottom-8"
       >
         <motion.span

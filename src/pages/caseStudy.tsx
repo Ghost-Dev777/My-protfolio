@@ -17,13 +17,13 @@ export default function CaseStudyPage() {
         <div className="mx-auto w-full max-w-4xl">
           <Link
             to="/#works"
-            className="mb-10 inline-flex w-fit items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
+            className="pb-4 inline-flex w-fit items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
           >
             <ArrowLeft className="size-4" /> Back to works
           </Link>
 
           <span className="block font-mono text-sm text-primary">{project.year}</span>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">{project.title}</h1>
+          <h1 className="my-3 text-4xl font-bold tracking-tight sm:text-5xl">{project.title}</h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">{project.description}</p>
 
           <div className="mt-6 flex flex-wrap items-center gap-3">

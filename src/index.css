@@ -98,3 +98,42 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.cv-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cv-btn__fill {
+  position: absolute;
+  inset: 0;
+  background-color: var(--primary);
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.cv-btn__text {
+  position: relative;
+  z-index: 1;
+}
+
+.cv-btn:hover .cv-btn__fill {
+  transform: translateY(0);
+}
+
+.cv-btn:hover {
+  color: var(--background);
+}

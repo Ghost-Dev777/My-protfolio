@@ -42,7 +42,7 @@ export function Experience() {
     >
       <div className="sticky top-0 flex min-h-screen flex-col justify-center overflow-hidden px-6 py-20 md:px-16 lg:px-24">
         <div className="mx-auto w-full max-w-6xl">
-          <p className="mb-12 font-mono text-sm uppercase tracking-widest text-primary">
+          <p className="pb-3 font-mono text-sm uppercase tracking-widest text-primary">
             My Experience
           </p>
 
@@ -70,9 +70,9 @@ export function Experience() {
                   >
                     <span className="absolute left-0 top-[18px] size-3 rounded-full border-2 border-primary bg-background" />
                     <span className="font-mono text-sm text-primary">{exp.duration}</span>
-                    <h3 className="mt-2 text-xl font-bold tracking-tight">{exp.role}</h3>
-                    <p className="text-sm font-medium text-muted-foreground">{exp.company}</p>
-                    <p className="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground">
+                    <h3 className="py-2 text-xl font-bold tracking-tight">{exp.role}</h3>
+                    <p className="text-sm font-medium text-muted-foreground pb-1">{exp.company}</p>
+                    <p className="text-justify text-sm leading-relaxed text-muted-foreground">
                       {exp.description}
                     </p>
                   </motion.div>

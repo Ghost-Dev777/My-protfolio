@@ -67,30 +67,23 @@ export const experiences: Experience[] = [
   {
     role: "Full-Stack Developer intership",
     company: "Utab pars",
-    duration: "2023 — Present",
+    duration: "Apr 2021 - Sep 2021",
     description:
-      "Leading front-end architecture and building full-stack features across React, Node.js, and MongoDB.",
+      "Worked on the frontend development of a cloud services platform, focusing on building responsive interfaces and optimizing user interactions.Collaborated within a real production environment to deliver scalable UI features.",
   },
   {
     role: "Android Developer-Flutter intership",
     company: "Tavv Sytem",
-    duration: "2021 — 2023",
+    duration: "Dec 2021 - Mar 2021",
     description:
-      "Built responsive, accessible interfaces with React and SCSS, and collaborated closely with design.",
+      "Joined a mobile development internship focused on preparing for Flutter development, starting with C++ fundamentals and algorithmic thinking.The program was paused due to internal company issues before entering the Flutter phase, but it helped strengthen my problem-solving mindset and technical foundation.",
   },
   {
     role: "Front-end Developer",
-    company: "Brightwave",
-    duration: "2020 — 2021",
+    company: "Jooyan Co.",
+    duration: "Jan 2026 - Mar 2026",
     description:
-      "Delivered marketing sites and internal tools using JavaScript, Laravel basics, and TailwindCSS.",
-  },
-  {
-    role: "Junior Developer",
-    company: "Freelance",
-    duration: "2019 — 2020",
-    description:
-      "Shipped small business websites and learned the fundamentals of modern web development.",
+      "Joined the company as a Frontend Developer and quickly learned Angular within two weeks to contribute to real production projects.Worked on two Angular-based projects, including a medical shift scheduling system and a product showcase website using GSAP-driven interactions.",
   },
 ];
 

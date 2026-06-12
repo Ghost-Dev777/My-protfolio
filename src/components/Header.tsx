@@ -109,7 +109,7 @@ function MobileNav() {
   ];
 
   return (
-    <div className="flex items-center justify-between px-6 py-3 rounded-2xl bg-black/70 w-full">
+    <div className="flex items-center justify-between px-6 py-2 rounded-2xl bg-black/70 w-full">
       {items.slice(0, 1).map((item) => (
         <motion.div
           key={item.to}
@@ -118,7 +118,7 @@ function MobileNav() {
           transition={{ delay: item.delay, duration: 0.4 }}
         >
           <Link to={item.to} className="text-lg font-bold">
-            <img src="/public/logo/Logo.jpg" className="h-15 rounded-full w-15" alt="" />
+            <img src="/logo/Logo.jpg" className="h-10 rounded-full w-10" alt="" />
           </Link>
         </motion.div>
       ))}

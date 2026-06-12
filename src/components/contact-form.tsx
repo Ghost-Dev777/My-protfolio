@@ -19,10 +19,10 @@ export function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const err = validate();
+    setError(err);
     if (err) return setError(err);
 
     setLoading(true);
-    setError("");
     try {
       const res = await fetch("/send-mail.php", {
         method: "POST",
@@ -57,6 +57,7 @@ export function ContactForm() {
           onClick={() => {
             setSubmitted(false);
             setValues({ name: "", email: "", message: "" });
+            setError("");
           }}
           className="text-sm font-medium text-primary transition-transform hover:scale-105"
         >
